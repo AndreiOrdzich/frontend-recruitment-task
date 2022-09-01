@@ -84,6 +84,8 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: .03em;
     vertical-align: baseline;
 }
 
@@ -134,11 +136,9 @@ table {
 
 /*Start stylesheet*/
 
-@import url('http://fonts.cdnfonts.com/css/roboto');
 $Dark1-color: #121212;
 $Primary-color: #E4C1AE;
-$font-stack :'Roboto',
-sans-serif;
+$Button-color: #ffffff;
 .body {
     display: flex;
     flex-direction: row;
@@ -176,13 +176,14 @@ sans-serif;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 380px;
     height: 250px;
-    background-color: aqua;
 }
 
 .head-title {
-    font: $font-stack;
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
@@ -190,9 +191,23 @@ sans-serif;
 }
 
 .content-text {
-    font: $font-stack;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
+}
+
+.button {
+    color: $Button-color;
+    background-color: $Primary-color;
+    width: 128px;
+    height: 48px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
