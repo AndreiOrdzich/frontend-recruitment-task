@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAGA,KAEI,UAHY,CAEZ,8BCDJ","file":"main.css","sourcesContent":["$font-stack : Helvetica,\r\nsans-serif;\r\n$primary-color: #333;\r\nbody {\r\n    font: 100% $font-stack;\r\n    color: $primary-color;\r\n}","body {\n  font: 100% Helvetica, sans-serif;\n  color: #333;\n}"]}
