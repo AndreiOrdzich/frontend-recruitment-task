@@ -150,11 +150,13 @@ $Button-color: #ffffff;
 
 .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 1440px;
-    height: 960px;
+    height: auto;
     margin: auto;
+    padding-top: 96px;
     background-color: white;
 }
 
@@ -165,7 +167,7 @@ $Button-color: #ffffff;
     align-items: center;
     width: 1025px;
     height: 330px;
-    margin-bottom: 534px;
+    margin-bottom: 96px;
 }
 
 .image {
@@ -211,3 +213,136 @@ $Button-color: #ffffff;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+
+
+/*Popup*/
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+
+.popup-bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+
+.popup-bg.active>.popup-wrapper {
+    position: relative;
+    top: 42%;
+    margin: auto;
+    max-width: 920px;
+    height: 210px;
+    opacity: 1;
+    background-image: url(./assets/img/certificate-prescchool.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s all ease-out;
+    transform: translate(0px, 0%) rotateX(0deg);
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    -ms-transition: .5s all ease-out;
+    -o-transition: .5s all ease-out;
+    -webkit-transform: translate(0px, 0%) rotateX(0deg);
+    -moz-transform: translate(0px, 0%) rotateX(0deg);
+    -ms-transform: translate(0px, 0%) rotateX(0deg);
+    -o-transform: translate(0px, 0%) rotateX(0deg);
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    max-width: 90%;
+    height: 98px;
+    margin-left: 95px;
+    padding-top: 56px;
+    transition: .5s all ease-in-out;
+    transform: translate(0px, 0%);
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    -webkit-transform: translate(0px, 0%);
+    -moz-transform: translate(0px, 0%);
+    -ms-transform: translate(0px, 0%);
+    -o-transform: translate(0px, 0%);
+}
+
+.popup.active {
+    transition: 0.5s;
+}
+
+.close-popup {
+    margin-top: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 101;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.close-popup:hover {
+    background-color: #fff;
+    border-radius: 50%;
+    filter: invert(94%) sepia(1%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+    -webkit-filter: invert(94%) sepia(1%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.popup-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 25%;
+    max-width: 920px;
+    height: 210px;
+    padding-right: 40px;
+    margin: auto;
+    opacity: 0;
+    background-color: $Button-color;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s all ease-in-out;
+    transform: translate(0px, -45%) rotate(0deg);
+    -webkit-transition: 2s all ease-in-out;
+    -moz-transition: 2s all ease-in-out;
+    -ms-transition: 2s all ease-in-out;
+    -o-transition: 2s all ease-in-out;
+    -webkit-transform: translate(0px, -45%) rotate(0deg);
+    -moz-transform: translate(0px, -45%) rotate(0deg);
+    -ms-transform: translate(0px, -45%) rotate(0deg);
+    -o-transform: translate(0px, -45%) rotate(0deg);
+}
+
+.head-title {}
