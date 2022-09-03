@@ -6,14 +6,20 @@ let closePopupButton = document.querySelector('.close-popup'); // Кнопка �
 let counter = document.querySelector('.counter');
 var main = document.querySelector('main');
 var lockPaddingValue = window.innerWidth - document.querySelector('.main').offsetWidth + 'px'; // подсчет толщины скролл
-
-
+let counter1 = 0;
+let counter2 = 0;
 
 /*start Popup*/
 openPopupButtons.forEach((button) => { // Перебираем все кнопки
     button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
-        let counter = document.querySelector('.counter');
-        counter.innerHTML = (counter.innerHTML * 1) + 1;
+        if(e.target.classList.contains("button1")){
+                counter1++;
+                 counter.innerHTML = counter1;
+        }
+        if(e.target.classList.contains("button2")){
+                counter2++;
+                counter.innerHTML = counter2;
+        }
         e.preventDefault(); // Предотвращаем дефолтное поведение браузера
         body.style.paddingRight = lockPaddingValue;
         popupBg.classList.add('active'); // Добавляем класс 'active' для фона
@@ -28,6 +34,7 @@ closePopupButton.addEventListener('click', () => { // Вешаем обрабо�
     setTimeout(function() {
         body.style.overflowY = "visible"; // возвращаем возможность прокрутки документа
         body.style.paddingRight = '0px'; // возвращаем нулевой отступ для body
+        counter.innerHTML = '0';
     }, 500);
 })
 
@@ -42,3 +49,27 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
     }
 });
 /*end Popup*/
+
+//local storage
+function setLocalStorage() {
+    localStorage.setItem('counter1', counter1);
+    localStorage.setItem('counter2', counter2);
+
+}
+
+function getLocalStorage() {
+    if (localStorage.getItem('counter1')) {
+   counter1 = localStorage.getItem('counter1')
+    }
+    if (localStorage.getItem('counter2')) {
+        counter2 = localStorage.getItem('counter2')
+    }
+}
+
+
+
+
+//вызовы функций локального хранилища
+window.addEventListener('load', getLocalStorage);
+window.addEventListener('beforeunload', setLocalStorage);
+// localStorage.clear();
