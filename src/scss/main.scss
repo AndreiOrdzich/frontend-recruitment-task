@@ -9,8 +9,10 @@ $Button-color: #ffffff;
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    max-width: 1440px;
     height: auto;
     background-color: darkgrey;
+    overflow-x: hidden;
 }
 
 .main {
@@ -18,12 +20,13 @@ $Button-color: #ffffff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1440px;
+    width: 100%;
     height: auto;
     margin: auto;
     padding-top: 96px;
     background-color: white;
 }
+
 
 .section {
     display: flex;
@@ -35,12 +38,95 @@ $Button-color: #ffffff;
     margin-bottom: 96px;
 }
 
+
+@media (max-width: 1400px) {
+    .section {
+        width: 79%;
+    } 
+}
+@media (max-width: 1280px) {
+    .section {
+        width: 87%;
+    } 
+}
+
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+        height: auto;
+    } 
+}
+
+@media (max-width: 896px) {
+    
+}
+
+@media (max-width: 640px) {
+    
+}
+ @media (min-aspect-ratio: 16/9) and (max-width: 768px)   {
+    
+}
+@media  (min-aspect-ratio: 16/9) and (max-width: 640px)  {
+    
+}
+
 .image {
     width: 550px;
     height: 330px;
     background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1400.jpg');
     background-size: cover;
 }
+
+
+@media (max-width: 1400px) {
+    .image {
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1394.jpg');
+    }
+    
+}
+@media (max-width: 1280px) {
+    .image {
+        width: 500px;
+        height: 296px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1234.jpg');
+    } 
+}
+
+@media (max-width: 1024px) {
+    
+    .image {
+        width: 450px;
+        height: 299px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1002.jpg');
+    } 
+}
+
+@media (max-width: 896px) {
+    .image {
+        width: 380px;
+        height: 253px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_694.jpg');
+    } 
+}
+
+@media (max-width: 640px) {
+    .image {
+        width: 320px;
+        height: 213px;
+        margin-bottom: 15px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg');
+    } 
+}
+ @media (orientation: landscape) {
+    .image {
+        width: 640px;
+        height: 360px;
+        margin-bottom: 15px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9\,c_fill\,g_auto__c_scale\,w_720.jpg');
+    } 
+}
+
 
 .content {
     display: flex;
@@ -50,11 +136,28 @@ $Button-color: #ffffff;
     height: 250px;
 }
 
+
+
+@media (max-width: 640px) {
+    .content {
+        width: 320px;
+        height: 220px;
+    }  
+}
+    
+
+
 .head-title {
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
     line-height: 120%;
+}
+
+@media (max-width: 640px) {
+    .head-title {
+        font-size: 32px;
+    }  
 }
 
 .content-text {

@@ -6,8 +6,8 @@ let closePopupButton = document.querySelector('.close-popup'); // Кнопка �
 let counter = document.querySelector('.counter'); // Число кликов на кнопку
 const buttonReset = document.querySelector('.button-reset') // Кнопка сброса счетчиков
 var lockPaddingValue = window.innerWidth - document.querySelector('.main').offsetWidth + 'px'; // подсчет толщины скролл
-let counter1 = 0;
-let counter2 = 0;
+let counter1 = 0; // Счетчик первого блока
+let counter2 = 0; // Счетчик второго блока
 
 
 /*start Popup*/
