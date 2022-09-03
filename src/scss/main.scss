@@ -343,3 +343,18 @@ $Button-color: #ffffff;
     -ms-transform: translate(0px, -45%) rotate(0deg);
     -o-transform: translate(0px, -45%) rotate(0deg);
 }
+
+.button-reset{
+    opacity: 0;
+    cursor: pointer;
+    transform: translate(-100%, 0%) rotate(0deg);
+    transition: .5s all ease-in-out;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -ms-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    -webkit-transform: translate(-100%, 0%) rotate(0deg);
+    -moz-transform: translate(-100%, 0%) rotate(0deg);
+    -ms-transform: translate(-100%, 0%) rotate(0deg);
+    -o-transform: translate(-100%, 0%) rotate(0deg);
+}
