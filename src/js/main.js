@@ -3,9 +3,8 @@ let popupBg = document.querySelector('.popup-bg'); // Фон попап окна
 let popup = document.querySelector('.popup'); // Само окно
 let openPopupButtons = document.querySelectorAll('.button'); // Кнопки для показа окна
 let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
-let counter = document.querySelector('.counter');
-const buttonReset = document.querySelector('.button-reset')
-var main = document.querySelector('main');
+let counter = document.querySelector('.counter'); // Число кликов на кнопку
+const buttonReset = document.querySelector('.button-reset') // Кнопка сброса счетчиков
 var lockPaddingValue = window.innerWidth - document.querySelector('.main').offsetWidth + 'px'; // подсчет толщины скролл
 let counter1 = 0;
 let counter2 = 0;
@@ -26,7 +25,6 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
                         buttonReset.setAttribute('style', 'opacity: 0; transform: translate(-100%, 0%)');
                         localStorage.clear();
                     })
-        
                 }
         }
         if(e.target.classList.contains("button2")){
@@ -41,10 +39,8 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
                         buttonReset.setAttribute('style', 'opacity: 0; transform: translate(-100%, 0%)');
                         localStorage.clear();
                     })
-        
                 }
         }
-
         e.preventDefault(); // Предотвращаем дефолтное поведение браузера
         body.style.paddingRight = lockPaddingValue;
         popupBg.classList.add('active'); // Добавляем класс 'active' для фона
@@ -75,7 +71,6 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
     }
 });
 
-
 /*end Popup*/
 
 //local storage
@@ -94,12 +89,6 @@ function getLocalStorage() {
     }
 }
 
-
-
-
 //вызовы функций локального хранилища
 window.addEventListener('load', getLocalStorage);
 window.addEventListener('beforeunload', setLocalStorage);
-// localStorage.clear();
-
-localStorage.clear();
