@@ -1,9 +1,10 @@
 
-/*Start stylesheet*/
-
+/*Variables*/
 $Dark1-color: #121212;
 $Primary-color: #E4C1AE;
 $Button-color: #ffffff;
+
+/*Start stylesheet*/
 .body {
     display: flex;
     flex-direction: row;
@@ -24,9 +25,20 @@ $Button-color: #ffffff;
     height: auto;
     margin: auto;
     padding-top: 96px;
-    background-color: white;
+    background-color: $Button-color;
 }
 
+@media   (max-width: 451px)   {
+    .main {
+        padding-top: 0px;
+    }
+}
+
+@media   (max-height: 415px)   {
+    .main {
+        padding-top: 0px;
+    }
+}
 
 .section {
     display: flex;
@@ -37,7 +49,6 @@ $Button-color: #ffffff;
     height: 330px;
     margin-bottom: 96px;
 }
-
 
 @media (max-width: 1400px) {
     .section {
@@ -57,22 +68,8 @@ $Button-color: #ffffff;
     } 
 }
 
-@media (max-width: 896px) {
-    
-}
-
-@media (max-width: 640px) {
-    
-}
- @media (min-aspect-ratio: 16/9) and (max-width: 768px)   {
-    
-}
-@media  (min-aspect-ratio: 16/9) and (max-width: 640px)  {
-    
-}
-
 .image {
-    width: 550px;
+    width: 505px;
     height: 330px;
     background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_1400.jpg');
     background-size: cover;
@@ -118,12 +115,37 @@ $Button-color: #ffffff;
         background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3\,c_fill\,g_auto__c_scale\,w_538.jpg');
     } 
 }
- @media (orientation: landscape) {
+ @media (orientation: landscape) and (max-width: 1024px){
     .image {
         width: 640px;
         height: 360px;
         margin-bottom: 15px;
+        margin-right: 0px;
         background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9\,c_fill\,g_auto__c_scale\,w_720.jpg');
+    } 
+}
+
+@media (orientation: landscape) and (max-width: 648px){
+    .image {
+        width: 520px;
+        height: 292px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9\,c_fill\,g_auto__c_scale\,w_596.jpg');
+    } 
+}
+
+
+@media (min-aspect-ratio: 1/1) and (max-width: 451px)   {
+    .image {
+        width: 400px;
+        height: 400px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1\,c_fill\,g_auto__c_scale\,w_450.jpg');
+    } 
+}
+@media  (min-aspect-ratio: 11/1) and (max-width: 320px)  {
+    .image {
+        width: 200px;
+        height: 200px;
+        background-image: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1\,c_fill\,g_auto__c_scale\,w_200.jpg');
     } 
 }
 
@@ -136,8 +158,6 @@ $Button-color: #ffffff;
     height: 250px;
 }
 
-
-
 @media (max-width: 640px) {
     .content {
         width: 320px;
@@ -145,8 +165,6 @@ $Button-color: #ffffff;
     }  
 }
     
-
-
 .head-title {
     font-style: normal;
     font-weight: 700;
@@ -181,7 +199,6 @@ $Button-color: #ffffff;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
-
 
 /*Popup*/
 
